@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        android:id="@+id/container"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/margin_16"
+        android:paddingEnd="@dimen/margin_16"
+        android:paddingTop="@dimen/margin_16">
+
+    <TextView
+            android:id="@+id/name"
+            style="@style/TextField"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Repository name"/>
+
+    <ImageView
+            android:id="@+id/iconStar"
+            android:layout_width="@dimen/icon_size_24"
+            android:layout_height="@dimen/icon_size_24"
+            android:src="@drawable/baseline_star_black_24"
+            android:layout_marginTop="@dimen/margin_8"
+            app:layout_constraintLeft_toLeftOf="@id/name"
+            app:layout_constraintTop_toBottomOf="@id/name"/>
+
+    <TextView
+            android:id="@+id/starsAmount"
+            style="@style/TextField"
+            android:layout_marginStart="@dimen/margin_4"
+            app:layout_constraintLeft_toRightOf="@id/iconStar"
+            app:layout_constraintTop_toTopOf="@id/iconStar"
+            app:layout_constraintBottom_toBottomOf="@+id/iconStar"
+            tools:text="100"/>
+
+    <ImageView
+            android:id="@+id/iconFork"
+            android:layout_width="@dimen/icon_size_24"
+            android:layout_height="@dimen/icon_size_24"
+            android:src="@drawable/baseline_share_black_24"
+            android:layout_marginStart="@dimen/margin_16"
+            app:layout_constraintLeft_toRightOf="@id/starsAmount"
+            app:layout_constraintTop_toTopOf="@id/iconStar"/>
+
+    <TextView
+            android:id="@+id/forksAmount"
+            style="@style/TextField"
+            android:layout_marginStart="@dimen/margin_4"
+            app:layout_constraintLeft_toRightOf="@id/iconFork"
+            app:layout_constraintTop_toTopOf="@id/iconFork"
+            app:layout_constraintBottom_toBottomOf="@+id/iconFork"
+            tools:text="100"/>
+
+    <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="@dimen/margin_16"
+            app:layout_constraintLeft_toLeftOf="@id/iconStar"
+            app:layout_constraintTop_toBottomOf="@id/iconStar"/>
+
+</android.support.constraint.ConstraintLayout>
